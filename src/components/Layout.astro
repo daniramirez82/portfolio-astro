@@ -1,0 +1,24 @@
+---
+import Navbar from "./Navbar.jsx";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Daniel´s Portafolio</title>
+  </head>
+  <body class="bg-white">
+    <div class="max-w-7xl mx-auto bg-white overflow-x-hidden">
+      <div class="container max-w-5xl mx-auto mt-4 md:mt-10">
+        <div class="px-4">
+          <Navbar client:load />
+          <slot />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
