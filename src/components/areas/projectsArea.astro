@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 import ProjectCard from "../UI/ProjectCard.astro";
 import { projects } from "../../content/projects";
@@ -15,3 +16,22 @@ import { projects } from "../../content/projects";
     }
   </div>
 </div>
+=======
+---
+import ProjectCard from "../UI/ProjectCard.astro";
+import { projects } from "../../content/projects";
+---
+
+<div class="flex flex-col mt-24">
+  <h2 class="text-yellow-600 text-5xl -tracking-wide font-bold">
+    Lasted Projects
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mt-8">
+    {
+      projects.map((p) => {
+        return <ProjectCard info={p} />;
+      })
+    }
+  </div>
+</div>
+>>>>>>> 3132d5f8e32d0cb0c81e4a9f5d02f87f707788fc

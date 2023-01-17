@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const projects = [
   {
     title: "SuPan",
@@ -36,3 +37,43 @@ export const projects = [
     demo: "#",
   },
 ];
+=======
+export const projects = [
+  {
+    title: "SuPan",
+    image: "https://dummyimage.com/largerectangle",
+    cates: ["HTML", "CSS", "Svelte", "Git", "Heroku"],
+    description:
+      "Is an not so much UI thinking app developed in my last job in a backery, used for made request of bread from the stores to the workshop, and to plan all the bread producton includes the bread recipes and ingrediente managment. ",
+    code: "#",
+    demo: "#",
+  },
+  {
+    title: "SuPan",
+    image: "https://dummyimage.com/largerectangle",
+    cates: ["HTML", "CSS", "Svelte", "Git", "Heroku"],
+    description:
+      "Is an not so much UI thinking app developed in my last job in a backery, used for made request of bread from the stores to the workshop, and to plan all the bread producton includes the bread recipes and ingrediente managment. ",
+    code: "#",
+    demo: "#",
+  },
+  {
+    title: "SuPan",
+    image: "https://dummyimage.com/largerectangle",
+    cates: ["HTML", "CSS", "Svelte", "Git", "Heroku"],
+    description:
+      "Is an not so much UI thinking app developed in my last job in a backery, used for made request of bread from the stores to the workshop, and to plan all the bread producton includes the bread recipes and ingrediente managment. ",
+    code: "#",
+    demo: "#",
+  },
+  {
+    title: "SuPan",
+    image: "https://dummyimage.com/largerectangle",
+    cates: ["HTML", "CSS", "Svelte", "Git", "Heroku"],
+    description:
+      "Is an not so much UI thinking app developed in my last job in a backery, used for made request of bread from the stores to the workshop, and to plan all the bread producton includes the bread recipes and ingrediente managment. ",
+    code: "#",
+    demo: "#",
+  },
+];
+>>>>>>> 3132d5f8e32d0cb0c81e4a9f5d02f87f707788fc
