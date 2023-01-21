@@ -4,11 +4,11 @@ const { link, label } = Astro.props;
 
 <div class="group border-b-2 border-b-yellow-600 hover:bg-yellow-600 
             
-             hover:text-white">
+             ">
   <a href={link}>
     <div class="p-2 flex space-x-1">
       <slot/>
-      <span class="font-bold text-stone-900">{label}</span>
+      <span class="font-bold text-stone-900 group-hover:text-white">{label}</span>
     </div>
   </a>
 </div>
