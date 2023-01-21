@@ -1,0 +1,32 @@
+---
+import ButtonCat from "../UI/ButtonCat.astro";
+const cates = ['HTML', 'CSS', 'JavaScrip', 'npm', 'git', 'Svelte', 'Reactjs', 'Nextjs', 'Astrojs', 'UI/UX', 'SASS', 'Photoshop', 'Ilustrator'];
+---
+
+<!-- wrapper div -->
+
+<div class="flex flex-col w-full mt-32">
+    <!-- photo and content  -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16">
+        <!-- profile pic -->
+        <div class="basis-2/5">
+            <img src="https://dummyimage.com/verticalrectangle" alt="profile image">
+        </div>
+        <!-- content about me -->
+        <div class="flex flex-col tracking-tight md:-ml-16 text-stone-900">
+            <p class="text-2xl tracking-tight font-bold mt-4">Nice to meet you,</p>
+            <h3 class="text-3xl mt-2  mb-4 tracking-tighter text-yellow-600 font-bold">I am Daniel Ramírez</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum possimus soluta tenetur quasi sit ex recusandae deleniti, ipsa dicta voluptatum earum dolor ratione sed culpa perferendis accusamus maiores voluptatem laborum!</p>
+            <p class="tracking-tighter my-4 text-yellow-600 text-2xl">Code, Desing, Learn and Teach.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quaerat illum similique saepe esse, autem placeat repellat veritatis iusto neque quod reiciendis. Eveniet labore recusandae magni expedita, modi minima officiis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. In totam eligendi sit asperiores nostrum? Quasi recusandae blanditiis inventore magnam. Obcaecati amet cum beatae. Nihil magni veniam quo vitae expedita quos!</p>
+            <img src="#" alt="sign"/>
+        </div>
+    </div>
+    <!-- experience -->
+    <div class="flex flex-col mt-10">
+        <h4 class="text-2xl tracking-tight font-bold mt-4">My experience includes but not limited</h4>
+        <div class="flex flex-wrap">
+            
+            {cates.map(cat => <div class="p-1"> <ButtonCat cate = {cat}/> </div>)}</div>
+    </div>
+</div>
