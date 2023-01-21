@@ -10,12 +10,24 @@
   }
 }
 
-textarea,
+/* textarea,
 input {
   outline: none;
   -webkit-appearance: none;
 }
 
-textarea:focus, input:focus{
+textarea:focus,
+input:focus {
   outline: none;
 }
+
+textarea:focus-visible,
+input:focus-visible {
+  outline: none;
+  border: none;
+  border-color: red;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+} */
