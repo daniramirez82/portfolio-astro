@@ -1,12 +1,16 @@
 ---
-import TextInput from "../UI/textInput.astro";
+import TextArea from "../UI/TextArea.astro";
+import ButtonMain from "../UI/buttons/ButtonMain.astro";
+import TextInput from "../UI/TextInput.astro";
+import Send from "../UI/icons/Send.astro";
 ---
 
 <div class="mt-10">
-    <h3>I'm ready to talk</h3>
-    <form>
-        <TextInput name="Name" type="text" label="Name" />
-        <TextInput name="email" type="email" label="Email" />
-        <TextInput name="message" type="text-area" label="Message" />
-    </form>
+  <h3>I'm ready to talk</h3>
+  <form class="relative">
+    <TextInput name="Name"  type="text" label="Name" />
+    <TextInput name="email" type="email" label="Email" />
+    <TextArea name="message" label="Message" rows ={5} />
+  </form>
+  <ButtonMain link='send' label='Send'> <Send/> </ButtonMain>
 </div>

@@ -1,3 +1,7 @@
+---
+import ButtonMain from "./buttons/ButtonMain.astro";
+import Clip from "./icons/Clip.astro";
+---
 <div class="lg:flex">
   <!-- la mano aqui -->
   <div class="lg:flex-1 relative hidden lg:block"><img class="absolute right-12 min-w-[230%] -top-[12%] " src="/images/hand.png" alt="hand" /></div>
@@ -20,12 +24,9 @@
         />
         <img class="w-10" src="/images/rrss/youtube.svg" alt="youtube logo" />
       </div>
-      <div
-        class="text-bold border-b-2 border-b-yellow-600 py-2 px-4 flex space-x-1"
-      >
-        <span><img src="/images/clip.svg" /></span>
-        <span>Download CV</span>
-      </div>
+      <ButtonMain cat='clip' label='Download CV'>
+        <Clip/>
+      </ButtonMain>
     </div>
   </div>
   <div class="lg:flex-1"></div>
