@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="hidden md:block" >
         <ul className="flex">
           {cates.map((cat) => {
-            return <li onClick={handleClick} className={`pl-4 text-yellow-600 ${cat === cate ? "font-bold" : "" }`}>{cat}</li>;
+            return <li onClick={handleClick} className={`pl-4 text-yellow-600 cursor-pointer ${cat === cate ? "font-bold" : "" }`}>{cat}</li>;
           })}
         </ul>
       </div>

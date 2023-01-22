@@ -1,6 +1,7 @@
 ---
 import ButtonMain from "./buttons/ButtonMain.astro";
 import Clip from "./icons/Clip.astro";
+const rrss = ['github', 'twitter', 'ig', 'linkedin', 'youtube'];
 ---
 <div class="lg:flex">
   <!-- la mano aqui -->
@@ -14,15 +15,8 @@ import Clip from "./icons/Clip.astro";
     </p>
     <div class="flex justify-between mt-4">
       <div class="flex flex-wrap">
-        <img class="w-10" src="/images/rrss/github.svg" alt="github logo" />
-        <img class="w-10" src="/images/rrss/twitter.svg" alt="twitter logo" />
-        <img class="w-10" src="/images/rrss/ig.svg" alt="instagram logo" />
-        <img
-          class="w-10 p-2"
-          src="/images/rrss/linkedin.svg"
-          alt="linkedin logo"
-        />
-        <img class="w-10" src="/images/rrss/youtube.svg" alt="youtube logo" />
+        {rrss.map((i)=> <a href="#nope" class="[&:nth-child(4)]:p-2 w-10"><img class="w-10 cursor-pointer" src={`/images/rrss/${i}.svg`} alt={`${i} logo`} /> </a>)}
+        
       </div>
       <ButtonMain cat='clip' label='Download CV'>
         <Clip/>
