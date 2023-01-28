@@ -1,0 +1,27 @@
+---
+import ButtonMain from "./buttons/ButtonMain.astro";
+import Clip from "./icons/Clip.astro";
+const rrss = ['github', 'twitter', 'ig', 'linkedin', 'youtube'];
+---
+<div class="lg:flex">
+  <!-- la mano-->
+  <div class="lg:flex-1 relative hidden lg:block"><img class="absolute right-12 lg:min-w-[130%]  xl:min-w-[230%] -top-[12%] " src="/images/hand.png" alt="hand" /></div>
+
+  <div class="flex lg:flex-1 flex-col text-stone-900 w-full lg:min-w-[550px] md:max-w-md mt-16 mx-auto">
+    <h1 class="text-5xl -tracking-wide font-bold">I’m Daniel Ramírez</h1>
+    <p class="text-2xl tracking-tight font-bold mt-4">
+      <span class="text-yellow-600">Frontend Developer And Designer Student.<br /></span
+      > I´m learning everything about Web Technologies and Product Design.
+    </p>
+    <div class="flex justify-between mt-4">
+      <div class="flex flex-wrap" id="Portfolio">
+        {rrss.map((i)=> <a href="#nope" class="[&:nth-child(4)]:p-2 w-10"><img class="w-10 cursor-pointer" src={`/images/icons/rrss/${i}.svg`} alt={`${i} logo`} /> </a>)}
+        
+      </div>
+      <ButtonMain cat='clip' label='Download CV' >
+        <Clip/>
+      </ButtonMain>
+    </div>
+  </div>
+  <div class="lg:flex-1"></div>
+</div>

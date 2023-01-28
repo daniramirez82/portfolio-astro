@@ -1,0 +1,28 @@
+---
+import TextArea from "../UI/TextArea.astro";
+import TextInput from "../UI/TTextInput.astro";
+import ButtonMain from "../UI/buttons/ButtonMain.astro";
+import Send from "../UI/icons/Send.astro";
+---
+
+<div class="flex justify-center w-full mb-40" id='Contact'>
+  <div class="lg:basis-1/4"></div>
+  <div class="mt-10 lg:basis-2/4 flex flex-col w-full max-w-md">
+    <h3
+      class="text-3xl w-full pl-2 mt-2 mb-4 tracking-tighter text-stone-900 font-bold mx-auto items-start"
+    >
+      I'm ready to talk...
+    </h3>
+    <form class="relative">
+      <TextInput name="Name" type="text" label="Name" />
+      <TextInput name="email" type="email" label="Email" />
+      <TextArea name="message" label="Message" rows={5} />
+    </form>
+    <div class="w-fit self-end pr-2">
+      <ButtonMain link="send" label="Send"><Send /></ButtonMain>
+    </div>
+  </div>
+  <div class="lg:basis-1/4">
+    <img class="hidden lg:block lg:mt-28" src="/images/hand2.png" alt="hand" />
+  </div>
+</div>
