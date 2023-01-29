@@ -10,8 +10,8 @@ const Navbar = () => {
     setCate(e.target.innerHTML);
   };
   return (
-    <div className="fixed top-0 right-0 left-0 max-w-5xl mx-auto z-50 h-10">
-      <div className="flex justify-between items-center relative z-50">
+    <div className="fixed top-0 right-0 left-0 max-w-5xl mx-auto z-50 h-14">
+      <div className="flex justify-between items-center relative z-50 px-4 h-full">
         <div className="text-stone-800 font-extrabold text-4xl">DR</div>
         <div className="md:hidden">
           <HamMenu cates={cates} />

@@ -1,6 +1,8 @@
 ---
 import ProjectCard from "../UI/ProjectCard.astro";
-import { projects } from "../../content/projects";
+
+const projects = await Astro.glob("../../content/projects/*.md");
+
 ---
 
 <div class="flex flex-col mt-24">
