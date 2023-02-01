@@ -3,8 +3,7 @@ import ButtonMain from "./buttons/ButtonMain.astro";
 import ButtonCat from "./buttons/ButtonCat.astro";
 import Code from "./icons/Code.astro";
 import Demo from "./icons/Demo.astro";
-const {frontmatter} = Astro.props.info;
-const {title, image, description, cates, code, demo} = frontmatter;
+const {title, image, description, cates, code, demo} = Astro.props.info;;
 ---
 
 <div class="w-full flex flex-col rounded overflow-hidden">
