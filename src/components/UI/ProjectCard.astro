@@ -3,37 +3,41 @@ import ButtonMain from "./buttons/ButtonMain.astro";
 import ButtonCat from "./buttons/ButtonCat.astro";
 import Code from "./icons/Code.astro";
 import Demo from "./icons/Demo.astro";
-const {title, image, description, cates, code, demo} = Astro.props.info;;
+const { title, image, description, cates, code, demo, slug } = Astro.props.info;
 ---
 
 <div class="w-full flex flex-col rounded overflow-hidden">
   <!-- image card -->
   <div>
-    <img class="object-cover min-w-full" src={image} alt={title} />
+    <a href={`/projects/${slug}`} class="cursor-pointer">
+      <img class="object-cover min-w-full" src={image} alt={title} />
+    </a>
   </div>
   <!-- card content -->
   <div class="flex flex-col justify-between h-full">
     <div>
-    <h2 class="text-2xl tracking-tight font-bold text-yellow-600 mt-4">
-      {title}
-    </h2>
-    <div class="flex pr-1 mt-2 space-x-2">
-      {
-        cates.map((cate) => {
-          return <ButtonCat cate={cate} />;
-        })
-      }
-    </div>
-    <p class="mt-4">{description}</p>
-  </div>
-    <div class='flex justify-between'>
-      <div class="flex space-x-4 mt-4">
-        <ButtonMain link={code} label='Code'> <Code/> </ButtonMain>
-        <ButtonMain link={demo} label='Demo'> <Demo/> </ButtonMain>
+      <h2 class="text-2xl tracking-tight font-bold text-yellow-600 mt-4">
+        {title}
+      </h2>
+      <div class="flex pr-1 mt-2 space-x-2">
+        {
+          cates.map((cate) => {
+            return <ButtonCat cate={cate} />;
+          })
+        }
       </div>
-
-      <div class='self-end pr-1'> <img src='./images/icons/more.svg'/></div>
-
+      <p class="mt-4">{description}</p>
+    </div>
+    <div class="flex justify-between">
+      <div class="flex space-x-4 mt-4">
+        <ButtonMain link={code} label="Code"><Code /></ButtonMain>
+        <ButtonMain link={demo} label="Demo"><Demo /></ButtonMain>
+      </div>
+      <div class="self-end pr-1">
+        <a href={`/projects/${slug}`} class="cursor-pointer">
+          <img src="./images/icons/more.svg" />
+        </a>
+      </div>
     </div>
   </div>
 </div>
