@@ -8,9 +8,9 @@ const { title, image, description, cates, code, demo, slug } = Astro.props.info;
 
 <div class="w-full flex flex-col rounded overflow-hidden">
   <!-- image card -->
-  <div>
+  <div class="h-[154%] overflow-hidden">
     <a href={`/projects/${slug}`} class="cursor-pointer">
-      <img class="object-cover min-w-full" src={image} alt={title} />
+      <img class="object-cover min-w-full transition-all duration-700 hover:scale-110" src={image} alt={title} />
     </a>
   </div>
   <!-- card content -->
@@ -30,13 +30,18 @@ const { title, image, description, cates, code, demo, slug } = Astro.props.info;
     </div>
     <div class="flex justify-between">
       <div class="flex space-x-4 mt-4">
-        <ButtonMain link={code} label="Code"><Code /></ButtonMain>
-        <ButtonMain link={demo} label="Demo"><Demo /></ButtonMain>
+        <ButtonMain link={code} label="Code" target = "_blank"><Code /></ButtonMain>
+        <ButtonMain link={demo} label="Demo" target = "_blank"><Demo /></ButtonMain>
       </div>
-      <div class="self-end pr-1">
+      <div class="self-end pr-1 group relative">
         <a href={`/projects/${slug}`} class="cursor-pointer">
           <img src="./images/icons/more.svg" />
         </a>
+        <div
+          class="absolute scale-0 group-hover:scale-100 -top-6 -left-10 text-xs px-2 py-1 border bg-white shadow-lg rounded-sm duration-150"
+        >
+          More
+        </div>
       </div>
     </div>
   </div>

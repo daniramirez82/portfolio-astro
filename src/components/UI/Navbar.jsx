@@ -1,12 +1,16 @@
 import HamMenu from "./HamMenu";
 import { useState } from "preact/hooks";
-const cates =[{cate:'Home', link: '#Home'}, {cate:'Portfolio', link:'#Portfolio'}, {cate: 'About Me', link:'#About'}, {cate:'Contact', link: '#Contact'}];
+const cates = [
+  { cate: "Home", link: "#Home" },
+  { cate: "Portfolio", link: "#Portfolio" },
+  { cate: "About Me", link: "#About" },
+  { cate: "Contact", link: "#Contact" },
+];
 
 const Navbar = () => {
   const [category, setCate] = useState("Home");
 
   const handleClick = (e) => {
-    console.log(e.target.innerHTML);
     setCate(e.target.innerHTML);
   };
   return (
@@ -18,12 +22,14 @@ const Navbar = () => {
         </div>
         <div className="hidden md:block">
           <ul className="flex">
-            {cates.map(({cate, link}) => {
+            {cates.map(({ cate, link }) => {
               return (
                 <a href={link}>
                   <li
                     onClick={handleClick}
-                    className={`pl-4 text-yellow-600 cursor-pointer ${cate === category ? "font-bold" : ""}`}
+                    className={`pl-4 text-yellow-600 cursor-pointer ${
+                      cate === category ? "font-bold" : ""
+                    }`}
                   >
                     {cate}
                   </li>
@@ -33,7 +39,6 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-
     </div>
   );
 };

@@ -1,8 +1,10 @@
 ---
-import Layout from "../../components/Layout.astro";
+//i will use this component for other projects to reder these on dinamics routes
+
 import Code from "../../components/UI/icons/Code.astro";
 import Demo from "../../components/UI/icons/Demo.astro";
 import ButtonMain from "../../components/UI/buttons/ButtonMain.astro";
+import PLayout from "../../components/UI/layouts/PLayout.astro";
 export async function getStaticPaths() {
   const posts = await Astro.glob("../../content/projects/*.md");
   return posts.map((post) => ({
@@ -17,9 +19,11 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { title, image, cates, description, code, demo } = post.frontmatter;
 const { Content } = Astro.props.post;
+const { path } = Astro.params;
+console.log('la ruta actual es:', path)
 ---
 
-<Layout>
+<PLayout> 
   <div class="flex flex-col">
     <img
       src={image}
@@ -32,9 +36,10 @@ const { Content } = Astro.props.post;
       </h1>
     </div>
     <Content />
-    <div class="flex space-x-4 mt-4">
-      <ButtonMain link={code} label="Code"><Code /></ButtonMain>
-      <ButtonMain link={demo} label="Demo"><Demo /></ButtonMain>
+    <div class="flex space-x-4 my-8">
+      <ButtonMain link={code} label="Code" target = "_blank"><Code /></ButtonMain>
+      <ButtonMain link={demo} label="Demo" target = "_blank"><Demo /></ButtonMain>
     </div>
   </div>
-</Layout>
+</PLayout>
+

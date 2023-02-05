@@ -9,6 +9,10 @@
     rate: 4
 ---
 
-Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras or
+I chose to use a ready-made design template to speed up my development process and because I was fond of the design created by a fellow Venezuelan. The design system in Figma made it easy to implement in code and I strived to achieve pixel-perfect results.
+<br/>
+<br/>
+Highlights: Astro, Preact, Tailwind, and Markdown.<br/><br/>
+I chose **Astro** for its performance and popularity. It was ideal for my portfolio design as it had very few interactive components. Astro has a fast learning curve and showed great performance. I also used **Preact**, which is lighter than its parent library, React, and worked well for my needs. As I had prior experience with **Tailwind**, using its classes during the development process was enjoyable. However, I discovered some new features, such as the ability to group classes to work together in the hover state, which was new to me. **Markdown** syntax was a new experience for me but I found it interesting and suitable for projects like my portfolio. Overall, I believe it worked well for this project.
+<br/><br/>
+**Next Features:** I would like to implement a **dark mode** and add **Spanish language support**, as a new area to show less important projects or code snippets that I have gained from my learning process.

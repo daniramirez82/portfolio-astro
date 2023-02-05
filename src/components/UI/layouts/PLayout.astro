@@ -1,0 +1,26 @@
+---
+import ProjectNavbar from "../ProjectNavbar.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Daniel´s Portafolio</title>
+  </head>
+  <body class="bg-white relative tracking-tight container mx-auto">
+    <div class ='absolute top-0' id='Home'></div>
+    <div class="fixed top-0 right-0 left-0 max-w-7xl mx-auto z-50 bg-white/80 backdrop-blur-sm h-14 shadow-md lg:shadow-none"></div>
+    <div class="max-w-7xl mx-auto bg-white overflow-x-hidden">
+      <div class="container max-w-5xl mx-auto mt-4 md:mt-10">
+        <div class="px-4">
+          <ProjectNavbar/>
+          <slot />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
