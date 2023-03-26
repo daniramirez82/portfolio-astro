@@ -19,8 +19,6 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { title, image, cates, description, code, demo } = post.frontmatter;
 const { Content } = Astro.props.post;
-const { path } = Astro.params;
-console.log('la ruta actual es:', path)
 ---
 
 <PLayout> 
