@@ -3,6 +3,19 @@ import TextArea from "../UI/TextArea.astro";
 import TextInput from "../UI/TTextInput.astro";
 import ButtonMain from "../UI/buttons/ButtonMain.astro";
 import Send from "../UI/icons/Send.astro";
+//TODO make a form state with signal to manage the form validation.
+//manage 3 inputs name, email, message.
+
+
+
+const handleInputChange = (e) => {
+  console.log('handle fired');
+  const {value, name} = e.target;
+  console.log(value, name);
+  //read from what input the chance come, update the value state
+  //runs the regex and update the error state of the input                           
+}
+
 ---
 
 <div class="flex justify-center w-full mb-40" id='Contact'>
@@ -14,7 +27,7 @@ import Send from "../UI/icons/Send.astro";
       I'm ready to talk...
     </h3>
     <form class="relative">
-      <TextInput name="Name" type="text" label="Name" />
+      <TextInput name="Name" type="text" label="Name" onChange = {handleInputChange}/>
       <TextInput name="email" type="email" label="Email" />
       <TextArea name="message" label="Message" rows={5} />
     </form>

@@ -1,5 +1,5 @@
 ---
-const { label, placeholder, name, type} = Astro.props;
+const { label, placeholder, name, type, onChange} = Astro.props;
 ---
 
 
@@ -8,6 +8,7 @@ const { label, placeholder, name, type} = Astro.props;
     type={type}
     id={name}
     name={name}
+    onchange={onChange}
     class="mt-1 pl-2 block w-full h-14 rounded border-2 border-stone-900/10 peer
      group-hover:border-stone-900/50
      focus:border-2
