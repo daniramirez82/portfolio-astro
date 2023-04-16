@@ -3,7 +3,7 @@ import Layout from "../components/UI/layouts/Layout.astro";
 import HiCard from "../components/UI/HiCard.astro";
 import ProjectsArea from "../components/areas/projectsArea.astro";
 import AboutMeArea from "../components/areas/aboutMeArea.astro";
-import ContactArea from "../components/areas/contactArea.astro";
+import ContactArea from "../components/areas/ContactArea";
 import Footer from "../components/areas/footer.astro";
 ---
 
@@ -11,6 +11,6 @@ import Footer from "../components/areas/footer.astro";
     <HiCard />
     <ProjectsArea />
     <AboutMeArea />
-    <ContactArea client:load/>
+    <ContactArea client:load />
     <Footer/>
 </Layout>

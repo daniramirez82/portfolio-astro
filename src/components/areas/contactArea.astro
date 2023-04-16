@@ -1,6 +1,7 @@
 ---
 import TextArea from "../UI/TextArea.astro";
-import TextInput from "../UI/TTextInput.astro";
+// import TextInput from "../UI/TTextInput.astro";
+import TextInput from "../UI/inputs/TextInput";
 import ButtonMain from "../UI/buttons/ButtonMain.astro";
 import Send from "../UI/icons/Send.astro";
 //TODO make a form state with signal to manage the form validation.
@@ -27,8 +28,8 @@ const handleInputChange = (e) => {
       I'm ready to talk...
     </h3>
     <form class="relative">
-      <TextInput name="Name" type="text" label="Name" onChange = {handleInputChange}/>
-      <TextInput name="email" type="email" label="Email" />
+      <!-- <TextInput name="Name" type="text" label="Name" onChange = {handleInputChange}/> -->
+      <!-- <TextInput name="email" type="email" label="Email" /> -->
       <TextArea name="message" label="Message" rows={5} />
     </form>
     <div class="w-fit self-end pr-2">
