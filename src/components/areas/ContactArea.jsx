@@ -128,7 +128,6 @@ const ContactArea = () => {
             <ButtonMain
               label="Send"
               onClick={handleSubmit}
-              disabled={formState.value.filledForm}
             >
               <Send />
             </ButtonMain>
