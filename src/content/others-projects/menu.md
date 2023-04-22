@@ -7,7 +7,7 @@
     code: "https://github.com/daniramirez82/react-animation"
     demo: "http://react-animation-seven.vercel.app/"
     design: "https://www.figma.com/file/O0YH4mUGDwMAggpN014OlP/Menu?node-id=8%3A18&t=TP1HfC96IKusWtIT-1"
-    rate: 2 
+    rate: 1 
 ---
 In this project, I aimed to explore different tools and techniques for animations in React. Using the Framer Motion library was a great way to add more advanced animations to my React components, and integrating my design work in Figma helped me to achieve a more cohesive look and feel. Taking advantage of SVG and the <symbol> tag to better organize my icons helped reduce duplication and make my code more efficient.
 
