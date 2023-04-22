@@ -14,47 +14,74 @@ const formInitialState = {
   name: "",
   email: "",
   message: "",
-  emailError: "Type a valid email",
+  emailError: " ",
+  filledForm: false,
 };
 
-
+const formState = signal(formInitialState);
 
 const ContactArea = () => {
 
-  const formState = signal(formInitialState);
-
-  const showModal = useSignal(false);
+  const showThanksModal = useSignal(false);
+  const showInvalidFormModal = useSignal(false);
 
   const handleInputChange = (e) => {
-
     const { value, name } = e.target;
+    formState.value.filledForm = false;
     formState.value = { ...formState.value, [name]: value };
 
     if (name === "email") {
       formState.value.emailError = validMailRegex.test(value)
-        ? ""
+        ? "Valid email! :)"
         : "Type a valid email";
+    }
+
+    if (
+      formState.value.name.length > 0 &&
+      formState.value.email.length > 0 &&
+      formState.value.message.length > 0 &&
+      formState.value.emailError.includes(":)")
+    ) {
+      formState.value.filledForm = true;
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!formState.value.filledForm) {
+      console.log("invalid form");
+      showInvalidFormModal.value = true;
+      return;
+    }
+
     const response = await sendNewContact(formState.value);
 
     if (response) {
-      showModal.value = true;
+      showThanksModal.value = true;
     }
 
     formState.value = formInitialState;
   };
 
-  const closeModal = ()=>{
-    showModal.value = false;
-  }
-
   return (
     <>
-      { showModal.value && <Modal title={"Thank you!."} message={"I will contact you back as soon as I receive this message!"} onClick={() => showModal.value = false } />}
+      {showInvalidFormModal.value && (
+        <Modal
+          title="Upsss"
+          message="You have to fill all the inputs."
+          alert={true}
+          onClick={() => (showInvalidFormModal.value = false)}
+        />
+      )}
+
+      {showThanksModal.value && (
+        <Modal
+          title="Thank you!."
+          message={"I will contact you back as soon as I receive this message!"}
+          onClick={() => (showThanksModal.value = false)}
+        />
+      )}
       <div class="flex justify-center w-full mb-40" id="Contact">
         <div class="lg:basis-1/4"></div>
         <div class="mt-10 lg:basis-2/4 flex flex-col w-full max-w-md">
@@ -62,10 +89,6 @@ const ContactArea = () => {
             I'm ready to talk...
           </h3>
           <form class="relative">
-            <p>{formState.value.name}</p>
-            <p>{formState.value.email}</p>
-            <p>{formState.value.emailError}</p>
-            <p>{formState.value.message}</p>
             <TextInput
               name="name"
               type="text"
@@ -80,7 +103,15 @@ const ContactArea = () => {
               value={formState.value.email}
               onInput={handleInputChange}
             />
-            <small>{formState.value.emailError}</small>
+            <small
+              className={`pl-3 ${
+                !formState.value.emailError.includes(":)")
+                  ? "text-red-300"
+                  : "text-green-300"
+              }`}
+            >
+              {formState.value.emailError}
+            </small>
             <TextAreaInput
               label="Message"
               name="message"
@@ -93,8 +124,12 @@ const ContactArea = () => {
           {/* <div>
         <div class="g-recaptcha" data-sitekey="6Lc53I0lAAAAAC9Pw8V4412fhTs_PZxekH8UEOlL"></div>
         </div> */}
-          <div class="w-fit self-end pr-2" onClick={handleSubmit}>
-            <ButtonMain label="Send">
+          <div class="w-fit self-end pr-2">
+            <ButtonMain
+              label="Send"
+              onClick={handleSubmit}
+              disabled={formState.value.filledForm}
+            >
               <Send />
             </ButtonMain>
           </div>

@@ -1,13 +1,14 @@
-const ButtonMain = ({ link, label, target, children }) => {
+const ButtonMain = ({ link, label, target, onClick, children }) => {
   return (
     <div
       class="group border-b-2 border-b-yellow-600 
- cursor-pointer relative w-fit pr-1 overflow-hidden "
+              cursor-pointer relative w-fit pr-1 overflow-hidden "
+      onClick={onClick}
     >
       <a target={target} href={link} class=" relative z-10">
         <div class="p-2 flex space-x-1">
           {children}
-          <span class="transition-all ease-in-out delay-200 font-bold text-stone-900 group-hover:text-white duration-150">
+          <span class={`transition-all ease-in-out delay-200 font-bold text-stone-900 group-hover:text-white duration-150`}>
             {label}
           </span>
         </div>
