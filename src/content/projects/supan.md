@@ -6,7 +6,7 @@
     description: "The app I developed during my last job at a bakery is not heavily focused on UI, it was used to make requests for bread from the stores to the workshop, and to plan all bread production, including managing bread recipes and ingredients"
     code: "https://github.com/daniramirez82/SuPan"
     demo: "https://su-pan.vercel.app/"
-    rate: 3
+    rate: 6
 ---
 
 From 2019 to 2021, I worked at a bakery store, primarily in the workshop where I was responsible for making the bread. Within a year, we experienced growth and expanded to 4 new stores. As a result, I was responsible for planning production and managing the distribution of bread to the stores. Additionally, I would receive requests from the stores. My app, which started out only receiving requests from the stores, later evolved to include important functions that helped me plan bread production. This included calculating ingredients according to each recipe and keeping track of historical production information.
