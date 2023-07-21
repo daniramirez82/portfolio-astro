@@ -1,29 +1,27 @@
 ---
-    slug: "moovies"
-    title: "Moovies"
-    image: "/images/images-projects/moovies.png"
+    slug: "users"
+    title: "Users"
+    image: "/images/images-projects/users.png"
     cates: ["React", "Figma", "Tailwind", "Vite", "UX/UI"]
-    description: "A small project created to put into practice the usage of some Reactjs functions, including the use of hooks like useMemo, useRef, and useCallback. It also involves practicing API integration and implementing a debounced input."
-    code: "https://github.com/daniramirez82/movies"
-    demo: "https://moovies-theta.vercel.app/"
+    description: "This project originated from a Twitch livestream by Midudev where he was solving a test for a job application that required knowledge of React, hooks, and APIs. After successfully completing the test, I decided to add a touch of pre-designed UX/UI using Figma and incorporated some additional tricks."
+    code: "https://github.com/daniramirez82/react-test.git"
+    demo: "https://user-list-tan.vercel.app/"
+    design: "https://www.figma.com/file/Mg09yO3NNvoOtpquTbVFhz/Users?type=design&node-id=2%3A2&mode=design&t=0DKZO2vZ0nLNZI51-1"
     rate: 5
 ---
 
-This project showcases my practical implementation of various Reactjs features, demonstrating my proficiency in utilizing hooks such as useMemo, useRef, and useCallback. It also highlights my ability to seamlessly connect with APIs and effectively implement a debounced input. By developing this small-scale project, I gained hands-on experience in applying Reactjs concepts and honed my skills in creating efficient and interactive web applications.
-
+This project originated from a Twitch livestream by Midudev where he was solving a test for a job application that required knowledge of React, hooks, and APIs. After successfully completing the test, I decided to add a touch of pre-designed UX/UI using Figma and incorporated some additional tricks.
 <br/>
 <br/>
 
 ## **Higthlight:** Reactjs / Figma / Tailwind / UX/UI 
 <br/>
 
-Initially, my idea was to practice movie search using a debounced API. Along the way, I encountered rendering challenges, which led me to utilize the useMemo and useCallback hooks to achieve efficient results and prevent unnecessary component re-renders during movie searches. Inspired by a beautiful design on Dribbble, I implemented an expandable left menu controlled by a global state using React Context. I incorporated animations and added mock user data to enhance the overall design. The search input includes error handling and is managed by a custom hook.
-
-The entire design system was initially planned using Figma.
+This project started with the execution of a live test conducted by Midudev on Twitch. The focus was on solving the given tasks using essential and intermediate React tools such as important hooks like useCallback, useRef, useMemo, as well as custom hooks. To enhance the project further, I decided to work on a UX/UI design from scratch, creating a small Design System and an HD user interface in Figma, which I later developed alongside this project. This brought about challenges in managing state and the overall rendering of the application. To address these challenges, I found solutions by leveraging tools like Redux Toolkit and importing all icons through SVG symbols. Additionally, I encountered some hurdles while using TypeScript.
 
 
 
 
 <br/>
 <br/>
-Future enhancements for the project include implementing infinite scrolling and login access.
+Future enhancements for the project include implementing a light/dark theme switch.
