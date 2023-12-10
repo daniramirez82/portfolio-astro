@@ -1,7 +1,7 @@
 ---
     slug: word-rotate
     title: "Word Rotation"
-    image: "/images/images-projects/countdown.png"
+    image: "/images/images-projects/word-rotation.png"
     cates: ["CSS", "view-transition"]
     description: "A snippet showcasing the use of the new view-transition tool in CSS. ALERT: Only compatible with Chrome/Edge engines; check caniuse.com for more information."
     code: "https://github.com/daniramirez82/word-rotate-test"
